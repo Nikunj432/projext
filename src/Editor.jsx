@@ -7,9 +7,10 @@ const Editor = () => {
   const [wordCount, setWordCount] = useState(0);
 
   const editor = useEditor({
-    title:"Start Here ",
+    
+    
     extensions: [StarterKit, WordCount],
-    content: title,
+    content: 'Start here...',
     onUpdate({ editor }) {
       const count = editor.storage.wordCount.wordCount; // Access the word count from storage
       setWordCount(count);
@@ -26,8 +27,8 @@ const Editor = () => {
 
   return (
     <div>
-      <div style={{ border: '1px solid #ddd', padding: '15px', borderRadius: '5px' }}>
-        <EditorContent editor={editor} />
+      <div style={{ border: '1px solid #ddd', padding: '15px', borderRadius: '5px' }} >
+        <EditorContent editor={editor}  />
       </div>
       <p style={{ marginTop: '10px' }}>Word count: {wordCount}</p>
     </div>
